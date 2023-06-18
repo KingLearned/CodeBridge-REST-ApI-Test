@@ -1,9 +1,5 @@
 const mysql = require('mysql2/promise');
-
-// const DatabaseName = 'codebridge'
-// const Host = 'localhost'
-// const User = 'root'
-// const Password = 'Learned 45'
+const { DatabaseName, Host, User, Password } = require('./config');
 
 // Create a connection pool
 const initDB = mysql.createPool({

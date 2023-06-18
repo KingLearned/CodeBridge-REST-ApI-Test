@@ -1,10 +1,11 @@
 const SQL = require('mysql')
+const { DatabaseName, Host, User, Password } = require('./config');
 
 const MYSQL = SQL.createConnection({
-    host: "Localhost",
-    user: "root",
-    password: 'Learned 1945',
-    database: 'codebridge'
+    host: Host,
+    user: User,
+    password: Password,
+    database: DatabaseName
 })
 
 MYSQL.connect((err, result) => {
@@ -14,6 +15,5 @@ MYSQL.connect((err, result) => {
         console.log('Data Base Not Found!')
     }
 })
-
 
 module.exports = MYSQL
