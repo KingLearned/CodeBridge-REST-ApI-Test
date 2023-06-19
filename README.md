@@ -12,7 +12,7 @@ This project is a sample REST API built using Node.js and MySQL. The API allows 
 * Replace the database connection details (username, password, database, host) with your MySQL configuration.
 
 ## Usage
-* Start the server: `npm run dev`
+* Start the server with: `npm run dev`
 * Access the API endpoints:
 - Ping: GET http://localhost:2000/ping
 - Retrieve dogs: GET http://localhost:2000/dogs

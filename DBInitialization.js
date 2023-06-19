@@ -26,7 +26,7 @@ async function createDatabase(databaseName) {
     if(error.code == 'ER_DB_CREATE_EXISTS'){
 
     }else{
-        console.error('Error ==>: ', error);
+        console.error('Error In Creating Database==>: ', error.sqlMessage);
     }
 
   } finally { initDB.end(); }
@@ -76,7 +76,7 @@ setTimeout(() => {
             if(error.code == 'ER_TABLE_EXISTS_ERROR'){
 
             }else{
-                console.error('Error ===>: ', error);
+                console.error('Error in creating Tables===>: ', error.sqlMessage);
             }
 
         } finally { initTable.end() }
